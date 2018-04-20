@@ -128,7 +128,7 @@ sleep(500);
     //если есть прикрепленные медиа - складываем в этот объект
     if (result.response.items[0].attachments !== undefined)
     {
-    document.getElementById("attach").innerHTML = decodeURIComponent("true. u can look media into jogs");
+    document.getElementById("attach").innerHTML = decodeURIComponent("true. u can look media into browser-logs");
     console.log(result.response.items[0].attachments);
     //выяснить почему не находит
     console.log(result.response.items[0].photo)
