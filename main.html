@@ -36,7 +36,6 @@
 }
 </style>
 </head>
-
 <body>
 
 <a>id</a>
@@ -44,11 +43,8 @@
 <a>length</a>
 <input id = "count" type="text">
 <button data-tooltip="Получаем id" type="button" onclick="getid()">get</button>
-<a>188271</a>
-<!--/////////////////////////////////////////////////////////////////////////////////////-->
 
 <div id = "makek">
-
 <a id = "id"></a>
 <br>
 <a id = "date"></a>
@@ -62,7 +58,6 @@
 <a id = "attach"></a>
 </div>
 <div id = "kek">
-
 <a>msg_id:</a>
 <br>
 <a>date:</a>
@@ -74,14 +69,9 @@
 <a>who:</a>
 <br>
 <a>attachments:</a>
-
 </div>
 
 <script type="text/javascript">
-
-
-
-
 
 function getid() {
   var count = 0;
@@ -90,25 +80,16 @@ function getid() {
 
 //пофиксить undefined 
   if (count == 0) {count = 1;};
-  
-
-
 for (var i = 0; i < count; i++) {
   console.log ('itteration: ' + i + 'input' + input);
-
-
     var script = document.createElement('SCRIPT');
 
     //api-метод
-
     script.src = "https://api.vk.com/method/messages.getById?message_ids=" + input + "&v=5.62&callback=callbackFunc&access_token=xxxxxxxxxxxx";
-
 
 sleep(500);
 
-
     var url = script.src;
-
     document.getElementsByTagName("head")[0].appendChild(script);
 
     //просто штука для просмотра ссылки с которой работаем
@@ -149,13 +130,10 @@ sleep(500);
     document.getElementById("text").innerHTML = text;
     document.getElementById("user_id").innerHTML = user_id;
     document.getElementById("who").href = who;
-   //генерация элементов
-   // var content = '<span>'+id+'</span>';
-   // content += '';
-
-//document.getElementById("id").innerHTML = document.getElementById("id").innerHTML + content;
-    //допилить
-
+    //TODO: допилить генерацию элементов
+    // var content = '<span>'+id+'</span>';
+    // content += '';
+    //document.getElementById("id").innerHTML = document.getElementById("id").innerHTML + content;
 
       var timestamp = date;
       var d = new Date(timestamp * 1000), // Convert the passed timestamp to milliseconds
@@ -180,14 +158,12 @@ sleep(500);
         h = 12;
       }
       */
-
       // ie: 2013-02-18, 8:35 AM  
       time = yyyy + '-' + mm + '-' + dd + ', ' + h + ':' + min/* + ' ' + ampm*/;
        // alert(time);
        document.getElementById("date").innerHTML = time;
        console.log('date: ' + time);
       return time;
-
   };
   
 function sleep(milliseconds) {
