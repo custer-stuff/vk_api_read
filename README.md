@@ -12,7 +12,7 @@
 3) Получить собственный токен для своего профиля https://vk.com/dev/authcode_flow_user
 
 4) В main.html в этой строке:
-https://github.com/woodman733/vk_api_read/blob/fe699e1609a5087a00d6a2e886ffdc529850b1cb/main.html#L104
+https://github.com/woodman733/vk_api_read/blob/f91d4866ca476e2fabec751647a43ddc64af634e/main.html#L88
 
 заменить 'xxxxxxxxxxxx' на ваш токен,  полученный выше.
 
